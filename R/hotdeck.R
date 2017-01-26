@@ -178,6 +178,7 @@ hotdeck_work <- function(x , variable=NULL, ord_var=NULL,domain_var=NULL,
             if(add>50){
               TF <- FALSE
               Don[TFindex]<-1
+              warning("Imputation-Algorithm was aborted!\nUsed at least one donor over 50 times, maybe too many missing values present in data.")
             }
             add <- add +1
           }
